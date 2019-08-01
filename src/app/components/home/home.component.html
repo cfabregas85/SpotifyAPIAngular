@@ -1,0 +1,14 @@
+<!-- Loading Animation -->
+<app-loading *ngIf="loading"></app-loading>
+
+<!-- Control Animation -->
+<div *ngIf="error" class=" alert alert-primary">
+    <h3>
+        Error
+    </h3>
+    <p>
+        {{ errormessaje }}
+    </p>
+</div>
+
+<app-cards [items]="newSounds"></app-cards>
