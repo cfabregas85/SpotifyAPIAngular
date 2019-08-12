@@ -7,6 +7,7 @@ import { ROUTES } from './app.routes';
 
 //http Request
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from '@angular/forms';
 
 // Components
 import { AppComponent } from './app.component';
@@ -15,6 +16,9 @@ import { SearchComponent } from './components/search/search.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/share/navbar/navbar.component';
 import { CardsComponent } from './components/share/cards/cards.component';
+import { FooterComponent } from './components/share/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 //Pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
@@ -32,11 +36,15 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
     NoimagePipe,
     DomseguroPipe,
     CardsComponent,
-    LoadingComponent
+    LoadingComponent,
+    LoginComponent,
+    FooterComponent,
+    RegisterComponent,   
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(ROUTES , {useHash:true})
   ],
   providers: [],

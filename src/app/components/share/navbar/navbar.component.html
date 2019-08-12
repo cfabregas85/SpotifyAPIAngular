@@ -8,12 +8,16 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item" routerLinkActive="active">
+            <li class="nav-item" *ngIf="auth.IsAuthenticatie()" routerLinkActive="active">
                 <a class="nav-link" routerLink="home">Home</a>
             </li>
-            <li class="nav-item" routerLinkActive="active">
+            <li class="nav-item" *ngIf="auth.IsAuthenticatie()" routerLinkActive="active">
                 <a class="nav-link" routerLink="search">Search</a>
             </li>
         </ul>
+        <span class="navbar-text">                       
+            <button class="btn btn-outline-success" routerLink="login" *ngIf="!auth.IsAuthenticatie()">Log In</button>
+            <button class="btn btn-outline-danger" routerLink="login" (click)="auth.logout()" *ngIf="auth.IsAuthenticatie()">Log Out</button>    
+         </span>
     </div>
 </nav>

@@ -20,6 +20,6 @@ export class SearchComponent{
     .subscribe( (data : any) => {
        this.artists = data;
        this.loading =false;
-    });    
+    });           
   }  
 }

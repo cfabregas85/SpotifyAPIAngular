@@ -5,6 +5,11 @@ body {
     color: black !important;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 hr {
     border-color: white;
 }
@@ -64,4 +69,15 @@ hr {
 
 .fadeIn {
     animation-name: fadeIn;
+}
+
+footer {
+    padding: 15px;
+    position: relative;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0px;
 }
