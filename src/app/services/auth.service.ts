@@ -16,7 +16,7 @@ export class AuthService {
   //https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]
 
   private url = 'https://identitytoolkit.googleapis.com/v1/accounts:';
-  private apiKey='Your Spotify API KEY';
+  private apiKey='API KEY';
   userToke:string;
   constructor( private http:HttpClient) { 
     this.readToken();
