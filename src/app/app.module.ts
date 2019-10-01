@@ -26,6 +26,14 @@ import { LoadingComponent } from './components/share/loading/loading.component';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 
+//Fire
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +53,10 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule,
     RouterModule.forRoot(ROUTES , {useHash:true})
   ],
   providers: [],

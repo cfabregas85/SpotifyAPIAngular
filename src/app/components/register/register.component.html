@@ -15,7 +15,7 @@
 
                 <span *ngIf="f.submitted && f.controls['name'].errors" class="text-danger animated fadeIn">The Name is required</span>
                 <div class="wrap-input100 m-b-16">
-                    <input class="input100" type="text" name="name" [(ngModel)]="user.nombre" required minlength="6" placeholder="Full Name">
+                    <input class="input100" type="text" name="name" [(ngModel)]="user.nombre" required minlength="2" placeholder="Full Name">
                     <span class="focus-input100"></span>
                 </div>
 

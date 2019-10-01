@@ -5,6 +5,7 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
 import Swal from 'sweetalert2';
+import { GoogleAuthService } from '../../services/google-auth.service';
 
 
 
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit {
    remember= false;
 
    constructor(private auth:AuthService,
-              private router:Router) { }
+              private router:Router, public authGoogle: GoogleAuthService) { }
 
   ngOnInit() {
     //Check if there is an email value on Local  Store
@@ -29,6 +30,10 @@ export class LoginComponent implements OnInit {
       this.user.email = localStorage.getItem('email');
       this.remember = true;      
     }   
+  }
+
+  googleLogin(){
+      this.authGoogle.loginGoogle().then((res) => this.router.navigateByUrl('/'));    
   }
 
   onLogin(form : NgForm){
@@ -40,6 +45,7 @@ export class LoginComponent implements OnInit {
       type:'info',
       text: 'Processing'
     });
+    
     Swal.showLoading();
     
     // Call to login function on Auth

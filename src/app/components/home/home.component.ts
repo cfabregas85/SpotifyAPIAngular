@@ -21,6 +21,7 @@ export class HomeComponent  {
       
     this._spotifyAPI.getNewReleases()
       .subscribe( (data:any) =>{
+        console.log(data);
        this.newSounds = data;
        this.loading = false;
       }, (errorrequest) =>{

@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UserModel } from '../components/models/user.model';
-
 import { map } from "rxjs/operators";
+
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +18,7 @@ export class AuthService {
   //https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]
 
   private url = 'https://identitytoolkit.googleapis.com/v1/accounts:';
-  private apiKey='API KEY';
+  private apiKey='AIzaSyCfjHA1nB6yTk6eVev245YUGeCx1HHS86o';
   userToke:string;
   constructor( private http:HttpClient) { 
     this.readToken();

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-//operator Map
 
+//operator Map
 import { map } from "rxjs/operators";
 
 @Injectable({
@@ -20,9 +20,8 @@ export class SpotifyService {
     const url =`https://api.spotify.com/v1/${ query }`;
 
     const headers = new HttpHeaders({
-      'Authorization':'Bearer BQAcW_rJpAmjx6v62HIauRXsYADFcOYsWRSmcabMiEtlc6ci3o2OzZIx5KayH28Z4quSdHTTjcUKvCMJvRXpyqqTMW-MaWw6soO8znnJKsB1mZMsjoMIs8jN6CzousehVFXirmngKQHas6s0OcVeIPgJ8h0WWJAd6Q',                           
+      'Authorization':'Bearer BQABd90NeirdjfbV4yc4B0f9CEeaMZou_nNe89mpQrSFD83OFfCYjf0tIOUdboKjg-ijGPJLHC_u8YY5wKjWMAVd-utek-wHsOfaAgeB3wXurcEoKWjqYzHzAJnXrNLjveetl5nGH4iZik2c7DkctOBbzbRLpOpP4g',                           
     });
-
     return this.http.get(url, {headers}); 
   }
 

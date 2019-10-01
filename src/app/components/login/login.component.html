@@ -1,11 +1,19 @@
 <div class="limiter animated fadeIn">
     <div class="container-login100">
         <div class="wrap-login100 p-t-50 p-b-90">
-            <form (ngSubmit)="onLogin(f)" #f="ngForm" class="login100-form validate-form flex-sb flex-w">
-
-                <span class="login100-form-title p-b-51">
+            <span class="login100-form-title p-b-51 m-2">
                         Login
-                    </span>
+            </span>
+            <div class="container-login100-form-btn m-t-17 mb-3">
+                <button class="login100-form-btn" type="buttom" (click)="googleLogin()">
+                                Sign in with Google
+                </button>
+            </div>
+            <span class="login100-form-title p-b-51">
+                    OR
+            </span>
+
+            <form (ngSubmit)="onLogin(f)" #f="ngForm" class="login100-form validate-form flex-sb flex-w">
 
                 <span *ngIf="f.submitted && f.controls['email'].errors" class="text-danger animated fadeIn">El correo es obligatorio</span>
                 <div class="wrap-input100 m-b-16">
@@ -42,4 +50,4 @@
             </form>
         </div>
     </div>
-</div>
+</div> fa
