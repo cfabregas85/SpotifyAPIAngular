@@ -18,7 +18,7 @@ export class AuthService {
   //https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]
 
   private url = 'https://identitytoolkit.googleapis.com/v1/accounts:';
-  private apiKey='AIzaSyCfjHA1nB6yTk6eVev245YUGeCx1HHS86o';
+  private apiKey='Your API Key';
   userToke:string;
   constructor( private http:HttpClient) { 
     this.readToken();
